@@ -11,20 +11,18 @@
     <script>
         // Função para obter o parâmetro da URL
         function obterParametroURL(nome) {
-            alert(nome);
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(nome);
         }
 
         // Obter a URL do parâmetro 'url'
         const urlRedirecionar = obterParametroURL('url');
-        
-        alert(urlRedirecionar);
 
         // Atualizar a URL de redirecionamento
         if (urlRedirecionar) {
             const linkElement = document.getElementById('redirectLink');
             linkElement.href = urlRedirecionar;
+                    alert(urlRedirecionar);
             linkElement.setAttribute('target', '_blank'); // Opcional: Abre o link em uma nova aba/janela
         }
     </script>

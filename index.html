@@ -23,6 +23,12 @@
             const linkElement = document.getElementById('redirectLink');
             linkElement.href = urlRedirecionar;
             linkElement.setAttribute('target', '_self'); // Opcional: Abre o link em uma nova aba/janela
+
+            // Atualizar a URL de redirecionamento no meta refresh tag
+            const metaRefreshTag = document.querySelector('meta[http-equiv="refresh"]');
+            if (metaRefreshTag) {
+                metaRefreshTag.setAttribute('content', '0;url=' + urlRedirecionar);
+            }
         }
     </script>
 </body>

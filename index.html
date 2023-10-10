@@ -2,10 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=https://amzn.to/3PBDwEq">
+    <meta http-equiv="refresh" content="0;url=URL_PARA_REDIRECIONAR">
     <title>Redirecionando...</title>
 </head>
 <body>
-    <p>Se não for redirecionado, <a href="https://amzn.to/3PBDwEq">clique aqui</a>.</p>
+    <p>Se não for redirecionado, <a id="redirectLink" href="URL_PARA_REDIRECIONAR">clique aqui</a>.</p>
+
+    <script>
+        // Função para obter o parâmetro da URL
+        function obterParametroURL(nome) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(nome);
+        }
+
+        // Obter a URL do parâmetro 'url'
+        const urlRedirecionar = obterParametroURL('url');
+
+        // Atualizar a URL de redirecionamento
+        if (urlRedirecionar) {
+            document.getElementById('redirectLink').href = urlRedirecionar;
+        }
+    </script>
 </body>
 </html>

@@ -19,10 +19,9 @@
         const urlRedirecionar = obterParametroURL('url');
 
         // Atualizar a URL de redirecionamento
-        if (urlRedirecionar) {
+        if (urlRedirecionar && urlRedirecionar !== window.location.href) {
             const linkElement = document.getElementById('redirectLink');
             linkElement.href = urlRedirecionar;
-                    alert(urlRedirecionar);
             linkElement.setAttribute('target', '_self'); // Opcional: Abre o link em uma nova aba/janela
         }
     </script>

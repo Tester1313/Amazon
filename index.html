@@ -11,7 +11,7 @@
     <script>
         // Função para obter o parâmetro da URL
         function obterParametroURL(nome) {
-            console.log(nome);
+            alert(nome);
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(nome);
         }
@@ -19,7 +19,7 @@
         // Obter a URL do parâmetro 'url'
         const urlRedirecionar = obterParametroURL('url');
         
-        console.log(urlRedirecionar);
+        alert(urlRedirecionar);
 
         // Atualizar a URL de redirecionamento
         if (urlRedirecionar) {

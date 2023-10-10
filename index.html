@@ -6,7 +6,7 @@
     <title>Redirecionando...</title>
 </head>
 <body>
-    <p>Se não for redirecionado, <a id="redirectLink" href="URL_PARA_REDIRECIONAR">clique aqui</a>.</p>
+    <p>Se não for redirecionado, <a id="redirectLink" href="#">clique aqui</a>.</p>
 
     <script>
         // Função para obter o parâmetro da URL
@@ -20,7 +20,9 @@
 
         // Atualizar a URL de redirecionamento
         if (urlRedirecionar) {
-            document.getElementById('redirectLink').href = urlRedirecionar;
+            const linkElement = document.getElementById('redirectLink');
+            linkElement.href = urlRedirecionar;
+            linkElement.setAttribute('target', '_blank'); // Opcional: Abre o link em uma nova aba/janela
         }
     </script>
 </body>
